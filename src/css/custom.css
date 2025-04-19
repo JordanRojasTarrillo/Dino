@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /**
  * Estilo global futurista y profesional para Docusaurus
@@ -7,8 +8,13 @@
 body {
   background-color: #f5f7fa; /* Gris muy claro */
   color: #181c23; /* Gris oscuro casi negro */
-  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
   letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in;
 }
 
 a {
@@ -22,6 +28,19 @@ a:hover {
   text-decoration: underline; /* Subrayado solo al pasar el mouse */
 }
 
+button {
+  background-color: #00b4ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005eff;
+}
+
 .navbar {
   background-color: #ffffffcc; /* Blanco translúcido */
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -29,7 +48,7 @@ a:hover {
 }
 
 .footer {
-  background-color: #ffd8e7;
+  background-color: #fdd85e;
   color: #181c23;
 }
 
@@ -46,9 +65,8 @@ code {
   font-family: 'Fira Mono', 'Consolas', monospace;
 }
 
-/* Paleta principal futurista */
 :root {
-  --ifm-color-primary: #00b4ff; /* Cian brillante */
+  --ifm-color-primary: #00b4ff; 
   --ifm-color-primary-dark: #0090cc;
   --ifm-color-primary-darker: #0077aa;
   --ifm-color-primary-darkest: #005077;
@@ -60,9 +78,8 @@ code {
   --docusaurus-highlighted-code-line-bg: rgba(0, 180, 255, 0.08);
 }
 
-/* ===== MODO OSCURO (FUTURISTA PROFESIONAL) ===== */
 [data-theme='dark'] {
-  --ifm-color-primary: #00eaff; /* Cian neón */
+  --ifm-color-primary: #00eaff; 
   --ifm-color-primary-dark: #00b4cc;
   --ifm-color-primary-darker: #008a99;
   --ifm-color-primary-darkest: #005066;
@@ -70,17 +87,29 @@ code {
   --ifm-color-primary-lighter: #99fcff;
   --ifm-color-primary-lightest: #e3feff;
 
-  background-color: #10131a; /* Gris azulado muy oscuro */
-  color: #f5f7fa; /* Blanco azulado */
+  background-color: #10131a; 
+  color: #f5f7fa; 
 }
 
 [data-theme='dark'] body {
   background-color: #10131a;
   color: #f5f7fa;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3, 
+[data-theme='dark'] h4, 
+[data-theme='dark'] h5, 
+[data-theme='dark'] h6, 
+[data-theme='dark'] p {
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in;
 }
 
 [data-theme='dark'] .navbar {
-  background-color: #181c23cc; /* Gris oscuro translúcido */
+  background-color: #181c23cc; 
   border-bottom: 1.5px solid #222a36;
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
@@ -103,18 +132,26 @@ code {
 
 [data-theme='dark'] a {
   color: #00eaff;
-  text-decoration: none; /* Quitar subrayado por defecto en dark */
+  text-decoration: none; 
   transition: color 0.2s, text-decoration 0.2s;
 }
 
 [data-theme='dark'] a:hover {
   color: #00b4ff;
-  text-decoration: underline; /* Subrayado solo al pasar el mouse */
+  text-decoration: underline; 
 }
 
-/* Efecto de neón sutil para títulos en dark */
 [data-theme='dark'] h1, 
 [data-theme='dark'] h2, 
 [data-theme='dark'] h3 {
   text-shadow: 0 0 8px #00eaff44;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
