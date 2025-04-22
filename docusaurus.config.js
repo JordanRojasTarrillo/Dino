@@ -53,12 +53,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/google-chrome.png',
       navbar: {
-        title: 'Mi Senati',
+        title: 'Desarrollador en Chrome (DevTools)',
         logo: {
           alt: 'Logo de Mi Senati',
-          src: 'img/logo.svg',
+          src: 'img/google-chrome.png',
         },
         items: [
           {
