@@ -1,122 +1,187 @@
-
 import React from 'react';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-export default function HomepageFeatures() {
+// Importa todas las imágenes necesarias
+import modoImg from '@site/static/img/1mododispositivo.png';
+import panelElementosImg from '@site/static/img/2panel_elementos.png';
+import panelConsolaImg from '@site/static/img/3Panel_de_la_consola.png';
+import panelFuentesImg from '@site/static/img/4_Panel_de_fuentes.png';
+import panelRedImg from '@site/static/img/5_Panel_de_red.png';
+import panelGrabadoraImg from '@site/static/img/6_Panel_de_grabadora.png';
+import panelRendimientoImg from '@site/static/img/7_Panel_de_rendimiento.png';
+import panelMemoriaImg from '@site/static/img/8_Panel_de_memoria.png';
+import panelAplicacionImg from '@site/static/img/9_Panel_de_la_aplicación.png';
+import panelSeguridadImg from '@site/static/img/10_Panel_de_seguridad.png';
+
+// Componente para cada tarjeta
+const FeatureCard = ({ title, image, description, list }) => {
+  const id = title.toLowerCase().replace(/ /g, '-');
+  
   return (
-    <section className={styles.foroSection}>
-      <div className={styles.container}>
-        <Heading as="h1" className={styles.sectionTitle}>
-          Descripción general
-        </Heading>
-        <p>
-          Las Herramientas para desarrolladores de Chrome son un conjunto de herramientas para desarrolladores web que están integradas directamente en el navegador Google Chrome. Las Herramientas para desarrolladores pueden ayudarte a editar páginas sobre la marcha y a diagnosticar problemas con rapidez, lo que, en última instancia, te ayuda a crear mejores sitios web en menos tiempo.
-        </p>
+    <div className={styles.foroCard} id={id}>
+      <Heading as="h3">{title}</Heading>
+      <img src={image} alt={title} className={styles.foroImg} />
+      <p>{description}</p>
+      <ul className={styles.featureList}>
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-        <div className={styles.videoWrapper}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/t1c5tNPpXjs?si=I0K7cA0rm6ZqMaAJ"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+function HomepageFeatures() {
+  const features = [
+    {
+      title: 'Modo de dispositivo',
+      image: modoImg,
+      description: 'Simula dispositivos móviles.',
+      list: ['Modo de dispositivo', 'Cómo emular los sensores del dispositivo'],
+    },
+    {
+      title: 'Panel de elementos',
+      image: panelElementosImg,
+      description:
+        'Depura JavaScript, conserva los cambios realizados entre recargas de páginas y guarda los cambios en fuentes locales.',
+      list: [
+        'Cómo comenzar a depurar JavaScript',
+        'Cómo pausar el código con puntos de interrupción',
+        'Edita y guarda archivos en un lugar de trabajo',
+        'Ejecuta fragmentos de JavaScript',
+        'Referencia de depuración de JavaScript',
+        'Cómo anular de forma local el contenido web y los encabezados de respuesta HTTP',
+      ],
+    },
+    {
+      title: 'Panel de consola',
+      image: panelConsolaImg,
+      description:
+        'Visualiza mensajes de registro, errores y advertencias generados por la página web.',
+      list: [
+        'Cómo usar la consola',
+        'Filtrar y buscar mensajes',
+        'Ejecutar comandos rápidos',
+      ],
+    },
+    {
+      title: 'Panel de fuentes',
+      image: panelFuentesImg,
+      description:
+        'Inspecciona y edita archivos fuente, como JavaScript y CSS, directamente en el navegador.',
+      list: ['Editar archivos fuente', 'Buscar en archivos', 'Administrar puntos de interrupción'],
+    },
+    {
+      title: 'Panel de red',
+      image: panelRedImg,
+      description: 'Consulta y depura la actividad de red.',
+      list: [
+        'Cómo inspeccionar la actividad de red',
+        'Referencia de las funciones de red',
+        'Ver recursos de la página',
+      ],
+    },
+    {
+      title: 'Panel de grabadora',
+      image: panelGrabadoraImg,
+      description: 'Graba, vuelve a reproducir y mide los flujos de usuarios.',
+      list: [
+        'Graba, vuelve a reproducir y mide los flujos de usuarios',
+        'Cómo personalizar la grabadora con extensiones',
+        'Referencia de las funciones de la grabadora',
+      ],
+    },
+    {
+      title: 'Panel de rendimiento',
+      image: panelRendimientoImg,
+      description: 'Encuentra formas de mejorar el rendimiento de la carga y del tiempo de ejecución.',
+      list: [
+        'Optimiza la velocidad del sitio web',
+        'Analiza el rendimiento del entorno de ejecución',
+        'Referencia de las funciones de rendimiento',
+      ],
+    },
+    {
+      title: 'Panel de memoria',
+      image: panelMemoriaImg,
+      description:
+        'Encuentra y corrige problemas de memoria que afecten el rendimiento de la página, como fugas de memoria.',
+      list: ['Cómo solucionar problemas de memoria'],
+    },
+    {
+      title: 'Panel de la aplicación',
+      image: panelAplicacionImg,
+      description:
+        'Inspecciona todos los recursos cargados, incluidas bases de datos, almacenamiento local, cookies y más.',
+      list: [
+        'Cómo depurar apps web progresivas',
+        'Cómo ver y editar el almacenamiento local',
+        'Cómo ver, agregar, editar y borrar cookies',
+        'Consulta la información de la prueba de origen',
+      ],
+    },
+    {
+      title: 'Panel de seguridad',
+      image: panelSeguridadImg,
+      description: 'Depura problemas de contenido mixto, problemas de certificados y más.',
+      list: ['Comprende los problemas de seguridad'],
+    },
+  ];
+
+  return (
+    <div className={styles.pageWrapper}>
+      <div className={styles.foroContainer}>
+        {/* Barra lateral izquierda */}
+        <div className={styles.sidebar}>
+          <div className={styles.sidebarInner}>
+            <Heading as="h3">Enlaces</Heading>
+            <ul className={styles.sidebarList}>
+              {features.map((feature, index) => (
+                <li key={index}>
+                  <a href={`#${feature.title.toLowerCase().replace(/ /g, '-')}`}>
+                    {feature.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <p>
-          Mira el video para ver demostraciones en vivo de los flujos de trabajo principales de Herramientas para desarrolladores, como la depuración de CSS, el prototipado de CSS, la depuración de JavaScript y el análisis del rendimiento de carga.
-        </p>
 
-        <Heading as="h2" className={styles.sectionSubtitle}>
-          Abrir Herramientas para desarrolladores
-        </Heading>
-        <ul>
-          <li>
-            Para trabajar con el DOM o CSS, haz clic con el botón derecho en un elemento de la página y selecciona <b>Inspect</b> para ir al panel Elements. También puedes presionar <b>Comando + Opción + C</b> (Mac) o <b>Control + Mayúsculas + C</b> (Windows, Linux y ChromeOS).
-          </li>
-          <li>
-            Para ver los mensajes registrados o ejecutar JavaScript, presiona <b>Comando + Opción + J</b> (Mac) o <b>Control + Mayúsculas + J</b> (Windows, Linux y ChromeOS) para ir directamente al panel de la Consola.
-          </li>
-        </ul>
-        <p>
-          Consulte <a href="https://developer.chrome.com/docs/devtools/open/" target="_blank" rel="noopener noreferrer">Abrir las Herramientas para desarrolladores de Chrome</a> para obtener más detalles y flujos de trabajo.
-        </p>
-
-        <Heading as="h2" className={styles.sectionSubtitle}>
-          Comenzar
-        </Heading>
-        <p>
-          Si eres un desarrollador web con más experiencia, estos son los puntos de partida recomendados para aprender cómo las Herramientas para desarrolladores pueden mejorar tu productividad:
-        </p>
-        <ul>
-          <li>Cómo ver y cambiar el DOM</li>
-          <li>Cómo ver y cambiar CSS</li>
-          <li>Depura JavaScript</li>
-          <li>Visualiza mensajes y ejecuta JavaScript en la consola</li>
-          <li>Optimiza la velocidad del sitio web</li>
-          <li>Cómo inspeccionar la actividad de red</li>
-        </ul>
-
-        <Heading as="h2" className={styles.sectionSubtitle}>
-          Descubre Herramientas para desarrolladores
-        </Heading>
-        <p>
-          La IU de Herramientas para desarrolladores puede ser un poco abrumadora... ¡Hay muchas pestañas! Sin embargo, si te tomas un tiempo para familiarizarte con cada pestaña y entender lo que es posible, es posible que descubras que Herramientas para desarrolladores puede aumentar considerablemente tu productividad.
-        </p>
-
-        <div className={styles.foroGrid}>
-          {/* Modo de dispositivo */}
-          <div className={styles.foroCard}>
-            <Heading as="h3">Modo de dispositivo</Heading>
-            {/* Cuando tengas la imagen, súbela a /static/img/ y cambia el src */}
-            
-            <img src="/img/1mododispositivo.png" alt="Modo de dispositivo" className={styles.foroImg} />
-            
-            <p>Simula dispositivos móviles.</p>
-            <ul>
-              <li>Modo de dispositivo</li>
-              <li>Cómo emular los sensores del dispositivo</li>
-            </ul>
+        {/* Contenido principal */}
+        <div className={styles.mainContent}>
+          <Heading as="h2">Herramientas para desarrolladores: Paneles principales</Heading>
+          <div className={styles.foroGrid}>
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                title={feature.title}
+                image={feature.image}
+                description={feature.description}
+                list={feature.list}
+              />
+            ))}
           </div>
-          {/* Panel de elementos */}
-          <div className={styles.foroCard}>
-            <Heading as="h3">Panel de elementos</Heading>
-            <img src="/img/panel-elementos.png" alt="Panel de elementos" className={styles.foroImg} />
-            <p>Visualiza y cambia el DOM y la CSS.</p>
-            <ul>
-              <li>Cómo comenzar a ver y cambiar el CSS</li>
-              <li>Editar CSS</li>
-              <li>Edita el DOM</li>
-              <li>Encuentra CSS no válidos, anulados, inactivos y otros tipos de CSS</li>
-              <li>Identifica posibles mejoras del CSS</li>
-              <li>Emula temas claros y oscuros, el contraste y otras funciones de medios de CSS</li>
-              <li>Busca CSS sin usar</li>
-              <li>Cómo inspeccionar animaciones</li>
+        </div>
+
+        {/* Tabla de contenido a la derecha */}
+        <div className={styles.toc}>
+          <div className={styles.tocInner}>
+            <Heading as="h3">Tabla de Contenido</Heading>
+            <ul className={styles.tocList}>
+              {features.map((feature, index) => (
+                <li key={index}>
+                  <a href={`#${feature.title.toLowerCase().replace(/ /g, '-')}`}>
+                    {feature.title}
+                  </a>
+                </li>
+              ))}
             </ul>
-          </div>
-          {/* Panel de la consola */}
-          <div className={styles.foroCard}>
-            <Heading as="h3">Panel de la consola</Heading>
-            <img src="/img/2_panel elementos.png" alt="Panel de la consola" className={styles.foroImg} />
-            <p>Ver mensajes y ejecutar JavaScript desde la consola.</p>
-            <ul>
-              <li>Comienza a usar la consola</li>
-              <li>Referencia de la API de Console Utilities</li>
-              <li>Referencia de la API de Console</li>
-            </ul>
-          </div>
-          {/* Panel de fuentes */}
-          <div className={styles.foroCard}>
-            <Heading as="h3">Panel de fuentes</Heading>
-            <img src="/img/panel-fuentes.png" alt="Panel de fuentes" className={styles.foroImg} />
-            <p>Depura y administra archivos fuente de JavaScript.</p>
-            {/* Puedes agregar más puntos aquí */}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
+
+export default HomepageFeatures;

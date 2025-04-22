@@ -126,3 +126,25 @@ a:hover {
     padding: 0 0.5rem;
   }
 }
+.foroImg {
+  width: 100%;
+  max-width: 900px; /* O el tamaño que quieras */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.videoWrapper {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.videoWrapper iframe {
+  width: 100%;
+  max-width: 960px; /* Aquí controlas el tamaño máximo */
+  height: 540px; /* Puedes ajustar esto a tu gusto */
+  border: none;
+}

@@ -1,157 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-/**
- * Estilo global futurista y profesional para Docusaurus
- */
-
-/* ===== MODO CLARO (FUTURISTA) ===== */
-body {
-  background-color: #f5f7fa; /* Gris muy claro */
-  color: #181c23; /* Gris oscuro casi negro */
-  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-  letter-spacing: 0.01em;
+/* Contenedor de página para asegurar que todo el contenido esté centrado */
+.pageWrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Poppins', sans-serif;
-  animation: fadeIn 1s ease-in;
+/* Contenedor principal con 3 columnas usando flexbox */
+.foroContainer {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  gap: 20px !important;
+  position: relative !important;
+  margin-top: 20px !important;
 }
 
-a {
-  color: #00b4ff; /* Azul cian brillante */
-  text-decoration: none; /* Quitar subrayado por defecto */
-  transition: color 0.2s, text-decoration 0.2s;
+/* Barra lateral izquierda */
+.sidebar {
+  width: 250px !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  position: relative !important;
 }
 
-a:hover {
-  color: #005eff; /* Azul eléctrico */
-  text-decoration: underline; /* Subrayado solo al pasar el mouse */
+.sidebarInner {
+  position: sticky !important;
+  top: 80px !important;
+  background-color: #f5f7fa !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-button {
-  background-color: #00b4ff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Contenido principal en el centro */
+.mainContent {
+  flex: 1 1 auto !important;
+  min-width: 0 !important; /* Importante para evitar que el contenido se desborde */
+  padding: 20px !important;
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-button:hover {
-  background-color: #005eff;
+/* Tabla de contenido a la derecha */
+.toc {
+  width: 250px !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  position: relative !important;
 }
 
-.navbar {
-  background-color: #ffffffcc; /* Blanco translúcido */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  border-bottom: 1.5px solid #e0e7ef;
+.tocInner {
+  position: sticky !important;
+  top: 80px !important;
+  background-color: #f5f7fa !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-.footer {
-  background-color: #fdd85e;
-  color: #181c23;
+/* Estilos para las tarjetas de características */
+.foroGrid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
 }
 
-.footer a {
-  color: #00b4ff;
+.foroCard {
+  padding: 20px !important;
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  border-left: 4px solid #007acc !important;
+  scroll-margin-top: 100px !important; /* Para que el scroll a los anclajes deje espacio arriba */
 }
 
-code {
-  background-color: #e3f6ff;
-  border: 1px solid #b3e0ff;
-  color: #005eff;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: 'Fira Mono', 'Consolas', monospace;
+.foroImg {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  margin: 15px 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-:root {
-  --ifm-color-primary: #00b4ff; 
-  --ifm-color-primary-dark: #0090cc;
-  --ifm-color-primary-darker: #0077aa;
-  --ifm-color-primary-darkest: #005077;
-  --ifm-color-primary-light: #33cfff;
-  --ifm-color-primary-lighter: #99e6ff;
-  --ifm-color-primary-lightest: #e3f6ff;
-
-  --ifm-code-font-size: 97%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 180, 255, 0.08);
+/* Estilos para enlaces y listas */
+.sidebarList,
+.tocList {
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #00eaff; 
-  --ifm-color-primary-dark: #00b4cc;
-  --ifm-color-primary-darker: #008a99;
-  --ifm-color-primary-darkest: #005066;
-  --ifm-color-primary-light: #33f6ff;
-  --ifm-color-primary-lighter: #99fcff;
-  --ifm-color-primary-lightest: #e3feff;
-
-  background-color: #10131a; 
-  color: #f5f7fa; 
+.sidebarList li,
+.tocList li {
+  margin-bottom: 10px !important;
 }
 
-[data-theme='dark'] body {
-  background-color: #10131a;
-  color: #f5f7fa;
-  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+.sidebarList a,
+.tocList a {
+  color: #007acc !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  display: block !important;
+  padding: 5px 0 !important;
+  transition: color 0.2s !important;
 }
 
-[data-theme='dark'] h1, 
-[data-theme='dark'] h2, 
-[data-theme='dark'] h3, 
-[data-theme='dark'] h4, 
-[data-theme='dark'] h5, 
-[data-theme='dark'] h6, 
-[data-theme='dark'] p {
-  font-family: 'Poppins', sans-serif;
-  animation: fadeIn 1s ease-in;
+.sidebarList a:hover,
+.tocList a:hover {
+  color: #005999 !important;
+  text-decoration: underline !important;
 }
 
-[data-theme='dark'] .navbar {
-  background-color: #181c23cc; 
-  border-bottom: 1.5px solid #222a36;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+/* Estilos para los títulos */
+.sidebar h3,
+.toc h3 {
+  margin-bottom: 15px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
 }
 
-[data-theme='dark'] .footer {
-  background-color: #181c23;
-  color: #f5f7fa;
+/* Estilos para las listas en las tarjetas */
+.featureList {
+  padding-left: 20px !important;
+  list-style-type: disc !important;
 }
 
-[data-theme='dark'] .footer a {
-  color: #00eaff;
+.featureList li {
+  margin-bottom: 5px !important;
 }
 
-[data-theme='dark'] code {
-  background-color: #0e2233;
-  border: 1px solid #00eaff;
-  color: #00eaff;
-  border-radius: 4px;
-}
-
-[data-theme='dark'] a {
-  color: #00eaff;
-  text-decoration: none; 
-  transition: color 0.2s, text-decoration 0.2s;
-}
-
-[data-theme='dark'] a:hover {
-  color: #00b4ff;
-  text-decoration: underline; 
-}
-
-[data-theme='dark'] h1, 
-[data-theme='dark'] h2, 
-[data-theme='dark'] h3 {
-  text-shadow: 0 0 8px #00eaff44;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+/* Media queries para responsividad */
+@media (max-width: 996px) {
+  .foroContainer {
+    flex-direction: column !important;
   }
-  to {
-    opacity: 1;
+  
+  .sidebar, 
+  .toc {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .sidebarInner,
+  .tocInner {
+    position: static !important;
+  }
+  
+  .mainContent {
+    order: -1 !important; /* Mueve el contenido principal al principio en dispositivos móviles */
   }
 }
