@@ -1,47 +1,49 @@
+
 ---
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introducción al Manual de Chrome DevTools
 
-Let's discover **Docusaurus in less than 5 minutes**.
+¡Bienvenido!  
+En este tutorial aprenderás a dominar las **Herramientas para desarrolladores de Chrome (DevTools)**, esenciales para cualquier desarrollador web moderno.
 
-## Getting Started
+## ¿Qué es Chrome DevTools?
 
-Get started by **creating a new site**.
+Chrome DevTools es un conjunto de herramientas integradas en Google Chrome que te permite inspeccionar, depurar y optimizar páginas web en tiempo real.  
+Con DevTools puedes editar HTML y CSS, depurar JavaScript, analizar el rendimiento, simular dispositivos móviles y mucho más.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Primeros pasos
 
-### What you'll need
+1. **Abre Chrome DevTools**  
+   - Haz clic derecho en cualquier página web y selecciona **Inspeccionar**.
+   - O usa el atajo:  
+     - **Windows/Linux:** `Ctrl + Shift + I`  
+     - **Mac:** `Cmd + Option + I`
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+2. **Explora los paneles principales**  
+   - **Elementos:** Inspecciona y edita HTML/CSS.
+   - **Consola:** Ejecuta JavaScript y revisa errores.
+   - **Fuentes:** Depura y explora archivos fuente.
+   - **Red:** Analiza las solicitudes y recursos cargados.
+   - ¡Y muchos más!
 
-## Generate a new site
+## ¿Qué aprenderás en este manual?
 
-Generate a new Docusaurus site using the **classic template**.
+- Cómo inspeccionar y modificar el DOM y los estilos.
+- Depuración avanzada de JavaScript.
+- Análisis de rendimiento y optimización.
+- Simulación de dispositivos y condiciones de red.
+- Uso de almacenamiento, cookies y recursos de la aplicación.
+- Atajos y trucos para ser más productivo.
 
-The classic template will automatically be added to your project after you run the command:
+## Recursos útiles
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- [Documentación oficial de Chrome DevTools](https://developer.chrome.com/docs/devtools)
+- [Novedades y tutoriales en Chrome Developers](https://developer.chrome.com/)
+- [Canal de YouTube de Chrome Developers](https://www.youtube.com/user/ChromeDevelopers)
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+---
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+> **Siguiente paso:**  
+> Elige un panel en la barra lateral para comenzar a explorar en profundidad cada herramienta de DevTools.
