@@ -1,35 +1,42 @@
-// @ts-check
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+/**
+ * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
+ */
+const sidebars = {
+  devtoolsManual: [
+    {
+      type: 'category',
+      label: 'Manual de Chrome DevTools',
+      collapsed: false,
+      items: [
+        'introduction',
+        {
+          type: 'category',
+          label: 'Paneles Principales',
+          collapsed: false,
+          items: [
+            'elements-panel',     // 1. Elementos
+            'console-panel',      // 2. Consola
+            'sources-panel',      // 3. Fuentes
+            'network-panel',      // 4. Red
+            'performance-panel',  // 5. Rendimiento
+            'memory-panel',       // 6. Memoria
+            'application-panel',  // 7. Aplicación
+            'security-panel',     // 8. Seguridad
+            'lighthouse-panel',   // 9. Lighthouse
+            'recorder-panel',     // 10. Grabadora
+            'device-mode',        // 11. Modo de Dispositivo
+            'coverage-panel',     // 12. Coverage
+            'issues-panel',       // 13. Issues
+            'layers-panel',       // 14. Layers
+            'rendering-panel',    // 15. Rendering
+          ],
+        },
+        'other-tools',
+        'shortcuts-tips',
+      ],
+    },
+  ],
+};
 
- /**
-  * Creating a sidebar enables you to:
-  - create an ordered group of docs
-  - render a sidebar for each doc of that group
-  - provide next/previous navigation
-  *
-  * The sidebars can be generated from the filesystem, or explicitly defined here.
-  *
-  * Create as many sidebars as you want.
-  *
-  * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
-  */
-  const sidebars = {
-    devtoolsManual: [
-      'introduction',
-      'elements-panel',
-      'console-panel',
-      'sources-panel',
-      'network-panel',
-      'performance-panel',
-      'memory-panel',
-      'application-panel',
-      'security-panel',
-      'device-mode',
-      'recorder-panel',
-      'other-tools',
-      'shortcuts-tips',
-    ],
-  };
-  
-  export default sidebars;
+export default sidebars;
