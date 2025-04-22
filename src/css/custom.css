@@ -20,7 +20,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* <-- Esto alinea el contenido al lado izquierdo dentro de la card */
+  align-items: flex-start;
   transition: box-shadow 0.22s cubic-bezier(.4,2,.6,1), transform 0.18s cubic-bezier(.4,2,.6,1);
   border-left: 4px solid #007acc;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
@@ -38,39 +38,40 @@
 
 .foroCard h3 {
   margin-top: 0;
-  margin-bottom: 14px;
-  font-size: 1.45rem;
+  margin-bottom: 22px;
+  font-size: 2.4rem;         /* Más grande */
   color: #007acc;
-  text-align: left; /* <-- Cambiado a la izquierda */
-  font-weight: 600;
+  text-align: left;
+  font-weight: 700;
   letter-spacing: 0.01em;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .foroCard p {
-  font-size: 1.18rem;
+  font-size: 1.7rem;      /* Más grande */
   color: #333;
-  text-align: left; /* <-- Cambiado a la izquierda */
-  margin-bottom: 14px;
-  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 22px;
+  line-height: 2;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .foroCard ul {
-  padding-left: 18px;
+  padding-left: 28px;      /* Un poco más de espacio */
   padding-right: 0;
   margin: 0;
-  font-size: 1.08rem;
-  text-align: left; /* <-- Cambiado a la izquierda */
+  font-size: 1.35rem;      /* Más grande */
+  text-align: left;
   color: #444;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   list-style-position: inside;
 }
 
 .foroCard li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-  text-align: left; /* <-- Cambiado a la izquierda */
+  margin-bottom: 14px;
+  line-height: 2;
+  text-align: left;
+  font-size: 1.35rem;      /* Más grande */
 }
 
 /* Responsive para móviles */
@@ -88,9 +89,9 @@
     max-width: 60px;
   }
   .foroCard h3 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
-  .foroCard p, .foroCard ul {
-    font-size: 1rem;
+  .foroCard p, .foroCard ul, .foroCard li {
+    font-size: 1.15rem;
   }
 }
