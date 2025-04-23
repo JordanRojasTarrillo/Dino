@@ -1,4 +1,3 @@
-
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
@@ -16,6 +15,9 @@ const config = {
   organizationName: 'jordanrojastarrillo', // Tu usuario de GitHub
   projectName: 'Dino', // Nombre del repositorio
 
+  // 👇 Rama personalizada para despliegue
+  deploymentBranch: 'main',
+
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -28,7 +30,7 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/jordanrojastarrillo/Dino/edit/main/',
@@ -47,86 +49,79 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      image: 'img/google-chrome.png',
-      navbar: {
-        title: 'Desarrollador en Chrome (DevTools)',
-        logo: {
-          alt: 'Logo de Mi Senati',
-          src: 'img/google-chrome.png',
+  themeConfig: /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+    image: 'img/google-chrome.png',
+    navbar: {
+      title: 'Desarrollador en Chrome (DevTools)',
+      logo: {
+        alt: 'Logo de Mi Senati',
+        src: 'img/google-chrome.png',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Tutorial',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          // { to: '/blog', label: 'Blog', position: 'left' }, // Blog oculto del menú principal
-          {
-            href: 'https://github.com/jordanrojastarrillo/Dino',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Documentación',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Comunidad',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'Más',
-            items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/jordanrojastarrillo/Dino',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} ¡Sigue aprendiendo y desarrollando tu potencial! `,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        {
+          href: 'https://github.com/jordanrojastarrillo/Dino',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Documentación',
+          items: [
+            {
+              label: 'Tutorial',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Comunidad',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'X',
+              href: 'https://x.com/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'Más',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/jordanrojastarrillo/Dino',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} ¡Sigue aprendiendo y desarrollando tu potencial! `,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  }),
+
 };
 
 export default config;
-
