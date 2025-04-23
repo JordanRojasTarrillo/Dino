@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'A',
   tagline: 'El conocimiento es poder',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/google-chrome.png',
 
   // URL del sitio en GitHub Pages
   url: 'https://jordanrojastarrillo.github.io',

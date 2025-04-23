@@ -1,97 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&family=Fira+Sans:wght@400;700&display=swap');
 
-.foroGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  justify-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 0;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+/* Fondo general para dar más vida */
+body {
+  background: linear-gradient(120deg, #e3f0ff 0%, #f8fbff 100%);
+  font-family: 'Fira Sans', 'Poppins', Arial, sans-serif;
+  color: #111;
 }
 
+/* Grilla de cards */
+.foroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 36px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+/* Card individual */
 .foroCard {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 32px 24px;
-  max-width: 340px;
+  background: linear-gradient(120deg, #fff 60%, #e3f0ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0, 60, 120, 0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  padding: 40px 32px 32px 32px;
+  max-width: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition: box-shadow 0.22s cubic-bezier(.4,2,.6,1), transform 0.18s cubic-bezier(.4,2,.6,1);
-  border-left: 4px solid #007acc;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  border-left: 6px solid #1976d2;
+  font-family: 'Poppins', 'Fira Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
+.foroCard::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #1976d2 0%, #42a5f5 80%, transparent 100%);
+  opacity: 0.13;
+  z-index: 0;
+}
+
+.foroCard:hover {
+  box-shadow: 0 12px 40px rgba(25, 118, 210, 0.18), 0 2px 8px rgba(0,0,0,0.09);
+  transform: translateY(-6px) scale(1.025);
+  border-left: 6px solid #0d47a1;
+}
+
+/* Imagen de la card */
 .foroImg {
-  max-width: 90px;
+  max-width: 110px;
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
   align-self: center;
+  background: #f1f7ff;
+  border: 2px solid #e3f0ff;
 }
 
+/* Título de la card */
 .foroCard h3 {
   margin-top: 0;
-  margin-bottom: 22px;
-  font-size: 2.4rem;         /* Más grande */
-  color: #007acc;
+  margin-bottom: 26px;
+  font-size: 2.7rem;
+  color: #1976d2;
   text-align: left;
   font-weight: 700;
   letter-spacing: 0.01em;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  z-index: 1;
+  position: relative;
 }
 
+/* Párrafos de la card */
 .foroCard p {
-  font-size: 1.7rem;      /* Más grande */
-  color: #333;
+  font-size: 1.45rem;
+  color: #222;
   text-align: left;
-  margin-bottom: 22px;
-  line-height: 2;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  margin-bottom: 24px;
+  line-height: 2.1;
+  font-family: 'Fira Sans', 'Poppins', Arial, sans-serif;
+  z-index: 1;
+  position: relative;
 }
 
+/* Listas de la card */
 .foroCard ul {
-  padding-left: 28px;      /* Un poco más de espacio */
-  padding-right: 0;
+  padding-left: 30px;
   margin: 0;
-  font-size: 1.35rem;      /* Más grande */
+  font-size: 1.18rem;
   text-align: left;
-  color: #444;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-  list-style-position: inside;
+  color: #1976d2;
+  font-family: 'Poppins', 'Fira Sans', Arial, sans-serif;
+  list-style: disc inside;
+  z-index: 1;
+  position: relative;
 }
 
 .foroCard li {
   margin-bottom: 14px;
   line-height: 2;
   text-align: left;
-  font-size: 1.35rem;      /* Más grande */
+  font-size: 1.18rem;
+  color: #0d47a1;
+  font-family: 'Fira Sans', 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Links dentro de las cards */
+.foroCard a {
+  color: #1976d2;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.18s;
+}
+.foroCard a:hover {
+  color: #0d47a1;
+  text-decoration: underline wavy;
 }
 
 /* Responsive para móviles */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .foroGrid {
     grid-template-columns: 1fr;
-    padding: 16px 0;
-    max-width: 100vw;
+    padding: 24px 0;
+    max-width: 98vw;
   }
   .foroCard {
-    max-width: 95vw;
+    max-width: 98vw;
     padding: 18px 8px;
   }
   .foroImg {
-    max-width: 60px;
+    max-width: 70px;
   }
   .foroCard h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .foroCard p, .foroCard ul, .foroCard li {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
+}
+
+/* Mejoras visuales generales */
+::-webkit-scrollbar-thumb {
+  background: #1976d2;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e3f0ff;
 }
