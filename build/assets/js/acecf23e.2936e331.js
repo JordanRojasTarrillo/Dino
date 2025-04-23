@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmi_doc_site=self.webpackChunkmi_doc_site||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/Dino/blog","blogTitle":"Blog","authorsListPath":"/Dino/blog/authors"}')}}]);
