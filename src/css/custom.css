@@ -1,0 +1,307 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&family=Fira+Sans:wght@400;700&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Asegurar que html y body llenen toda la altura */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general para modo claro */
+body {
+  background: linear-gradient(120deg, #e3f0ff 0%, #f8fbff 100%);
+  font-family: 'Fira Sans', 'Poppins', Arial, sans-serif;
+  color: #111;
+}
+
+/* Grilla de cards */
+.foroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 36px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+/* Card individual */
+.foroCard {
+  background: linear-gradient(120deg, #fff 60%, #e3f0ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0, 60, 120, 0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  padding: 40px 32px 32px 32px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.22s cubic-bezier(.4,2,.6,1), transform 0.18s cubic-bezier(.4,2,.6,1);
+  border-left: 6px solid #1976d2;
+  font-family: 'Poppins', 'Fira Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.foroCard::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #1976d2 0%, #42a5f5 80%, transparent 100%);
+  opacity: 0.13;
+  z-index: 0;
+}
+
+.foroCard:hover {
+  box-shadow: 0 12px 40px rgba(25, 118, 210, 0.18), 0 2px 8px rgba(0,0,0,0.09);
+  transform: translateY(-6px) scale(1.025);
+  border-left: 6px solid #0d47a1;
+}
+
+/* Imagen de la card */
+.foroImg {
+  max-width: 110px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+  align-self: center;
+  background: #f1f7ff;
+  border: 2px solid #e3f0ff;
+}
+
+/* Título de la card */
+.foroCard h3 {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 2.7rem;
+  color: #1976d2;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  z-index: 1;
+  position: relative;
+}
+
+/* Párrafos de la card */
+.foroCard p {
+  font-size: 1.45rem;
+  color: #222;
+  text-align: left;
+  margin-bottom: 24px;
+  line-height: 2.1;
+  font-family: 'Fira Sans', 'Poppins', Arial, sans-serif;
+  z-index: 1;
+  position: relative;
+}
+
+/* Listas de la card */
+.foroCard ul {
+  padding-left: 30px;
+  margin: 0;
+  font-size: 1.18rem;
+  text-align: left;
+  color: #1976d2;
+  font-family: 'Poppins', 'Fira Sans', Arial, sans-serif;
+  list-style: disc inside;
+  z-index: 1;
+  position: relative;
+}
+
+.foroCard li {
+  margin-bottom: 14px;
+  line-height: 2;
+  text-align: left;
+  font-size: 1.18rem;
+  color: #0d47a1;
+  font-family: 'Fira Sans', 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Links dentro de las cards */
+.foroCard a {
+  color: #1976d2;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.18s;
+}
+.foroCard a:hover {
+  color: #0d47a1;
+  text-decoration: underline wavy;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .foroGrid {
+    grid-template-columns: 1fr;
+    padding: 24px 0;
+    max-width: 98vw;
+  }
+  .foroCard {
+    max-width: 98vw;
+    padding: 18px 8px;
+  }
+  .foroImg {
+    max-width: 70px;
+  }
+  .foroCard h3 {
+    font-size: 1.7rem;
+  }
+  .foroCard p, .foroCard ul, .foroCard li {
+    font-size: 1.05rem;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar-thumb {
+  background: #1976d2;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e3f0ff;
+}
+
+/* ===================== MODO OSCURO ===================== */
+/* Unifica el fondo en modo oscuro para todo el contenido principal */
+html[data-theme='dark'],
+html[data-theme='dark'] body,
+html[data-theme='dark'] #__docusaurus,
+html[data-theme='dark'] .main-wrapper,
+html[data-theme='dark'] .container {
+  background: #181f2a !important;
+  color: #e3eafc;
+}
+
+html[data-theme='dark'] .foroGrid {
+  background: none;
+}
+
+html[data-theme='dark'] .foroCard {
+  background: linear-gradient(120deg, #232b39 60%, #181f2a 100%);
+  border-left: 6px solid #42a5f5;
+  box-shadow: 0 6px 32px rgba(33, 150, 243, 0.13), 0 1.5px 6px rgba(0,0,0,0.18);
+  color: #e3eafc;
+}
+
+html[data-theme='dark'] .foroCard::before {
+  background: radial-gradient(circle, #42a5f5 0%, #1976d2 80%, transparent 100%);
+  opacity: 0.18;
+}
+
+html[data-theme='dark'] .foroCard:hover {
+  box-shadow: 0 12px 40px rgba(33, 150, 243, 0.22), 0 2px 8px rgba(0,0,0,0.22);
+  border-left: 6px solid #90caf9;
+}
+
+html[data-theme='dark'] .foroImg {
+  background: #232b39;
+  border: 2px solid #181f2a;
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.18);
+}
+
+html[data-theme='dark'] .foroCard h3 {
+  color: #90caf9;
+  text-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
+}
+
+html[data-theme='dark'] .foroCard p {
+  color: #e3eafc;
+}
+
+html[data-theme='dark'] .foroCard ul {
+  color: #90caf9;
+}
+
+html[data-theme='dark'] .foroCard li {
+  color: #42a5f5;
+}
+
+html[data-theme='dark'] .foroCard a {
+  color: #90caf9;
+}
+html[data-theme='dark'] .foroCard a:hover {
+  color: #fff;
+  text-decoration: underline wavy;
+}
+
+/* Scrollbar en modo oscuro */
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #42a5f5;
+}
+html[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #232b39;
+}
+
+/* Navbar más grande, animada y con gradiente llamativo */
+.navbar {
+  min-height: 90px;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #f62222 0%, #42a5f5 100%);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.13);
+  transition: background 0.5s cubic-bezier(.4,2,.6,1), min-height 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+/* Títulos y enlaces de la navbar */
+.navbar__title,
+.navbar__item {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff !important;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar__item:hover {
+  color: #ffffff !important;
+  transform: scale(1.08) translateY(-2px);
+  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.13);
+}
+
+/* Contenedor del logo centrado */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Imagen del logo con animación */
+.navbar__logo img {
+  height: 56px !important;
+  width: auto;
+  transition: transform 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.navbar__logo img:hover {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+/* ===================== FOOTER ROJO SIEMPRE ===================== */
+html[data-theme='dark'] .footer,
+.footer {
+  background: #181f2a !important;
+  color: #fff !important;
+}
+html[data-theme='dark'] .footer a,
+.footer a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+html[data-theme='dark'] .footer a:hover,
+.footer a:hover {
+  color: #ffd6d6 !important;
+}
