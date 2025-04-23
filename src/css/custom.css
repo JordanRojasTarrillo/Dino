@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&family=Fira+Sans:wght@400;700&display=swap');
 
-/* Fondo general para dar más vida */
+/* Asegurar que html y body llenen toda la altura */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general para modo claro */
 body {
   background: linear-gradient(120deg, #e3f0ff 0%, #f8fbff 100%);
   font-family: 'Fira Sans', 'Poppins', Arial, sans-serif;
@@ -152,11 +159,81 @@ body {
   }
 }
 
-/* Mejoras visuales generales */
+/* Scrollbar personalizado */
 ::-webkit-scrollbar-thumb {
   background: #1976d2;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #e3f0ff;
+}
+
+/* ===================== MODO OSCURO ===================== */
+html[data-theme='dark'] {
+  background: #181f2a;
+}
+
+html[data-theme='dark'] body {
+  background: #181f2a;
+  color: #e3eafc;
+}
+
+html[data-theme='dark'] .foroGrid {
+  background: none;
+}
+
+html[data-theme='dark'] .foroCard {
+  background: linear-gradient(120deg, #232b39 60%, #181f2a 100%);
+  border-left: 6px solid #42a5f5;
+  box-shadow: 0 6px 32px rgba(33, 150, 243, 0.13), 0 1.5px 6px rgba(0,0,0,0.18);
+  color: #e3eafc;
+}
+
+html[data-theme='dark'] .foroCard::before {
+  background: radial-gradient(circle, #42a5f5 0%, #1976d2 80%, transparent 100%);
+  opacity: 0.18;
+}
+
+html[data-theme='dark'] .foroCard:hover {
+  box-shadow: 0 12px 40px rgba(33, 150, 243, 0.22), 0 2px 8px rgba(0,0,0,0.22);
+  border-left: 6px solid #90caf9;
+}
+
+html[data-theme='dark'] .foroImg {
+  background: #232b39;
+  border: 2px solid #181f2a;
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.18);
+}
+
+html[data-theme='dark'] .foroCard h3 {
+  color: #90caf9;
+  text-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
+}
+
+html[data-theme='dark'] .foroCard p {
+  color: #e3eafc;
+}
+
+html[data-theme='dark'] .foroCard ul {
+  color: #90caf9;
+}
+
+html[data-theme='dark'] .foroCard li {
+  color: #42a5f5;
+}
+
+html[data-theme='dark'] .foroCard a {
+  color: #90caf9;
+}
+html[data-theme='dark'] .foroCard a:hover {
+  color: #fff;
+  text-decoration: underline wavy;
+}
+
+/* Scrollbar en modo oscuro */
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #42a5f5;
+}
+html[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #232b39;
 }
