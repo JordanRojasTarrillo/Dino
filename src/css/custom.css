@@ -237,3 +237,60 @@ html[data-theme='dark'] ::-webkit-scrollbar-thumb {
 html[data-theme='dark'] ::-webkit-scrollbar-track {
   background: #232b39;
 }
+
+/* Navbar más grande, animada y con gradiente llamativo */
+.navbar {
+  min-height: 90px;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #f62222 0%, #42a5f5 100%);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.13);
+  transition: background 0.5s cubic-bezier(.4,2,.6,1), min-height 0.3s;
+}
+
+/* Navbar más grande, animada y con gradiente llamativo */
+.navbar {
+  min-height: 90px;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #f62222 0%, #42a5f5 100%);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.13);
+  transition: background 0.5s cubic-bezier(.4,2,.6,1), min-height 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+/* Títulos y enlaces de la navbar */
+.navbar__title,
+.navbar__item {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff !important;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar__item:hover {
+  color: #ffd600 !important;
+  transform: scale(1.08) translateY(-2px);
+  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.13);
+}
+
+/* Contenedor del logo centrado */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Imagen del logo con animación */
+.navbar__logo img {
+  height: 56px !important;
+  width: auto;
+  transition: transform 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.navbar__logo img:hover {
+  transform: scale(1.12) rotate(-6deg);
+}

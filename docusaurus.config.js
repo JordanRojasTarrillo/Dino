@@ -67,7 +67,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          // { to: '/blog', label: 'Blog', position: 'left' }, // Blog oculto del menú principal
           {
             href: 'https://github.com/jordanrojastarrillo/Dino',
             label: 'GitHub',
@@ -107,10 +107,10 @@ const config = {
           {
             title: 'Más',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/jordanrojastarrillo/Dino',
