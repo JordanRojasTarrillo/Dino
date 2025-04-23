@@ -10,7 +10,7 @@ import panelRedImg from '@site/static/img/5_Panel_de_red.png';
 import panelGrabadoraImg from '@site/static/img/6_Panel_de_grabadora.png';
 import panelRendimientoImg from '@site/static/img/7_Panel_de_rendimiento.png';
 import panelMemoriaImg from '@site/static/img/8_Panel_de_memoria.png';
-import panelAplicacionImg from '@site/static/img/9_Panel_de_la_aplicación.png';
+import panelAplicacionImg from '@site/static/img/9_Panel_de_la_aplicacion.png';
 import panelSeguridadImg from '@site/static/img/10_Panel_de_seguridad.png';
 
 export default function HomepageFeatures() {

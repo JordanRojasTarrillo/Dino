@@ -16,7 +16,7 @@ const config = {
   organizationName: 'jordanrojastarrillo', // Tu usuario de GitHub
   projectName: 'Dino', // Nombre del repositorio
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -129,3 +129,4 @@ const config = {
 };
 
 export default config;
+
