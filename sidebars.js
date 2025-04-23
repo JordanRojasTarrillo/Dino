@@ -1,39 +1,38 @@
-
 /**
  * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-  devtoolsManual: [
+  tutorialSidebar: [
     {
       type: 'category',
       label: 'Manual de Chrome DevTools',
       collapsed: false,
       items: [
-        'introduction',
+        'tutorial-basics/introduction',
         {
           type: 'category',
           label: 'Paneles Principales',
           collapsed: false,
           items: [
-            'elements-panel',     // 1. Elementos
-            'console-panel',      // 2. Consola
-            'sources-panel',      // 3. Fuentes
-            'network-panel',      // 4. Red
-            'performance-panel',  // 5. Rendimiento
-            'memory-panel',       // 6. Memoria
-            'application-panel',  // 7. Aplicación
-            'security-panel',     // 8. Seguridad
-            'lighthouse-panel',   // 9. Lighthouse
-            'recorder-panel',     // 10. Grabadora
-            'device-mode',        // 11. Modo de Dispositivo
-            'coverage-panel',     // 12. Coverage
-            'issues-panel',       // 13. Issues
-            'layers-panel',       // 14. Layers
-            'rendering-panel',    // 15. Rendering
+            'tutorial-basics/elements-panel',
+            'tutorial-basics/console-panel',
+            'tutorial-basics/sources-panel',
+            'tutorial-basics/network-panel',
+            'tutorial-basics/performance-panel',
+            'tutorial-basics/memory-panel',
+            'tutorial-basics/application-panel',
+            'tutorial-basics/security-panel',
+            'tutorial-basics/lighthouse-panel',
+            'tutorial-basics/recorder-panel',
+            'tutorial-basics/device-mode',
+            'tutorial-basics/coverage-panel',
+            'tutorial-basics/issues-panel',
+            'tutorial-basics/layers-panel',
+            'tutorial-basics/rendering-panel',
           ],
         },
-        'other-tools',
-        'shortcuts-tips',
+        'tutorial-basics/other-tools',
+        'tutorial-basics/shortcuts-tips',
       ],
     },
   ],
