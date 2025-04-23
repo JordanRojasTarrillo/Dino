@@ -1,15 +1,16 @@
+
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'A',
-  tagline: 'El conocimiento es poder',
+  title: '¡Bienvenido a tu espacio de aprendizaje web!',
+  tagline: '¡Impulsa tu carrera como desarrollador web!',
   favicon: 'img/google-chrome.png',
 
   // URL del sitio en GitHub Pages
   url: 'https://jordanrojastarrillo.github.io',
-  baseUrl: '/Dino/',  // Asegúrate de que tenga la barra inclinada al final
+  baseUrl: '/Dino/',
 
   // Configuración para despliegue en GitHub Pages
   organizationName: 'jordanrojastarrillo', // Tu usuario de GitHub
@@ -29,7 +30,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/jordanrojastarrillo/Dino/edit/main/',
         },
         blog: {
@@ -44,7 +45,7 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -118,7 +119,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mi Senati. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ¡Sigue aprendiendo y desarrollando tu potencial! `,
       },
       prism: {
         theme: prismThemes.github,

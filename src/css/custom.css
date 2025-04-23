@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&family=Fira+Sans:wght@400;700&display=swap');
 
 /* Asegurar que html y body llenen toda la altura */
@@ -169,12 +170,13 @@ body {
 }
 
 /* ===================== MODO OSCURO ===================== */
-html[data-theme='dark'] {
-  background: #181f2a;
-}
-
-html[data-theme='dark'] body {
-  background: #181f2a;
+/* Unifica el fondo en modo oscuro para todo el contenido principal */
+html[data-theme='dark'],
+html[data-theme='dark'] body,
+html[data-theme='dark'] #__docusaurus,
+html[data-theme='dark'] .main-wrapper,
+html[data-theme='dark'] .container {
+  background: #181f2a !important;
   color: #e3eafc;
 }
 
@@ -245,15 +247,6 @@ html[data-theme='dark'] ::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #f62222 0%, #42a5f5 100%);
   box-shadow: 0 4px 24px rgba(25, 118, 210, 0.13);
   transition: background 0.5s cubic-bezier(.4,2,.6,1), min-height 0.3s;
-}
-
-/* Navbar más grande, animada y con gradiente llamativo */
-.navbar {
-  min-height: 90px;
-  font-size: 1.25rem;
-  background: linear-gradient(90deg, #f62222 0%, #42a5f5 100%);
-  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.13);
-  transition: background 0.5s cubic-bezier(.4,2,.6,1), min-height 0.3s;
   display: flex;
   align-items: center;
 }
@@ -269,7 +262,7 @@ html[data-theme='dark'] ::-webkit-scrollbar-track {
 }
 
 .navbar__item:hover {
-  color: #ffd600 !important;
+  color: #ffffff !important;
   transform: scale(1.08) translateY(-2px);
   text-shadow: 0 2px 8px rgba(255, 214, 0, 0.13);
 }
@@ -293,4 +286,20 @@ html[data-theme='dark'] ::-webkit-scrollbar-track {
 
 .navbar__logo img:hover {
   transform: scale(1.12) rotate(-6deg);
+}
+
+/* ===================== FOOTER ROJO SIEMPRE ===================== */
+html[data-theme='dark'] .footer,
+.footer {
+  background: #181f2a !important;
+  color: #fff !important;
+}
+html[data-theme='dark'] .footer a,
+.footer a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+html[data-theme='dark'] .footer a:hover,
+.footer a:hover {
+  color: #ffd6d6 !important;
 }

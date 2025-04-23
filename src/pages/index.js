@@ -17,11 +17,15 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+        <Link
+    className="button button--secondary button--lg"
+    to="#"
+    style={{ pointerEvents: 'none', opacity: 0.6 }}
+    aria-disabled="true"
+    tabIndex={-1}
+  >
+    Continua deslizando 🚀🚀🚀
+  </Link>
         </div>
       </div>
     </header>
