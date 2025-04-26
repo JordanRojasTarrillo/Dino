@@ -6,6 +6,13 @@ Este proyecto es un sitio de documentación interactivo y moderno, construido co
 
 ---
 
+## 🦖 **Enlaces útiles**
+
+- **Acceder al sitio en cPanel:** [https://989874247.facturalo.co/docusaurus/](https://989874247.facturalo.co/docusaurus/)
+- **Visita el sitio de GitHub Pages:** [https://jordanrojastarrillo.github.io/Dino/](https://jordanrojastarrillo.github.io/Dino/)
+
+---
+
 ## 🚀 Descripción
 
 **Dino** es un manual y tutorial para aprender, explorar y potenciar tus habilidades como desarrollador web utilizando Chrome DevTools. Aquí encontrarás guías, trucos, atajos y recursos para mejorar tu flujo de trabajo y comprensión de las herramientas de desarrollo.
